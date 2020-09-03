@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duckhunt</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
     <script src="javascript.js"></script> 
+    
 </head>
-<body onload="moveBird()">
-    <div onclick="missBird()">
-    <img id="bird" onclick="hitBird()" src="img/duck.gif" alt="">
+<body onload="Bird()">
+    <div id="page" onclick="missBird()">
+        <div id="hitDiv">
+            <a id="hits">0</a>
+            <a> hit(s)</a>
+        </div>
+
+        <div id="missDiv">
+            <a id="misses">0</a>
+            <a> missed</a>
+        </div>
+
+        <img id="bird" onclick="hitBird()" src="img/duck.gif" alt="">
     </div>
 </body>
 </html>
