@@ -7,6 +7,7 @@ function hitBird() {
     clicked = true;
     hits++;
     document.getElementById("hits").innerHTML = hits;
+    endCheck()
 }
 function missBird() {
     if (clicked == false) {
@@ -14,6 +15,7 @@ function missBird() {
         document.getElementById("misses").innerHTML = misses;
     }
     clicked = false;
+    endCheck()
 }
 function Bird() {
     setInterval(function () {
@@ -84,4 +86,16 @@ function Bird() {
         bird.style.left = leftPxPx;
     }
 }, 1500);
+}
+
+function endCheck() {
+    if (hits+misses == 20) {
+        clearInterval();
+        bird.style.display = "none";
+        document.getElementById("hitDiv").style.display = "none";
+        document.getElementById("missDiv").style.display = "none";
+        document.getElementById("gameoverDiv").style.display = "initial";
+        document.getElementById("gameoverHit").innerHTML = hits+" hits";
+        document.getElementById("gameoverMiss").innerHTML = misses+" missed";
+    }
 }

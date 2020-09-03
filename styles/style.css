@@ -23,3 +23,17 @@
 #hitDiv, #missDiv {
     padding: 1rem;
 }
+#gameoverDiv {
+    top: 0;
+    width: 100%;
+    padding-top: 10%;
+    position: absolute;
+    text-align: center;
+    display: none;
+}
+#gameoverDiv h1 {
+    text-align: center;
+}
+#gameoverDiv h3 {
+    text-align: center;
+}
