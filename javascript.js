@@ -10,7 +10,8 @@ function hitBird() {
 }
 function missBird() {
     if (clicked == false) {
-        alert("miss")
+        misses++;
+        document.getElementById("misses").innerHTML = misses;
     }
     clicked = false;
 }
